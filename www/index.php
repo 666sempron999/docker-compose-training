@@ -17,13 +17,14 @@
 
 
     <?php
-
-    $conn = mysqli_connect("db", "user", "test", "myDb");
+    $conn = mysqli_connect('db', 'user', 'test', 'myDb');
 
     if (mysqli_connect_errno()) {
       echo "Failed to connect to MySQL: " . mysqli_connect_error();
       exit();
     }
+
+    echo("hhh");
 
     $query = "SELECT * From Person";
     $result = mysqli_query($conn, $query);
